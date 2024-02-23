@@ -1,7 +1,8 @@
 # fib_api
 ###  1. 概要
+  引数からフィボナッチ数を出力するAPI作成
 ###  2. ファイル構成 
-  * main.go - TCPコネクションからserverのｈａｎｄｌｅｒを呼び出す
+  * main.go - TCPコネクションからserverのhandlerを呼び出す
   * middleware.go - corsを設定し、get・option以外の呼び出しを拒否している
   * routes.go -　routeを設定
   * utils.go - json → object, object → json
@@ -10,4 +11,5 @@
   * go.mod - moduleの定義、サードパッケージの管理
 ### 3. 工夫した点
   1. フィボナッチ数列をメモ化を用いて再現することで高速化している
-  2. 
+  2. json周りの処理をメソッド化することで、コード量を減らしファイルを見やすいようにしている
+  3. routerはgoの標準パッケージを使うのではなく、go-chiというサードパッケージを使うことでmiddlewareの設定を簡単にできるようにしている。
