@@ -1,6 +1,13 @@
 # fib_api
 ###  1. 概要
-  引数からフィボナッチ数を出力するAPI作成
+  #### 引数からフィボナッチ数を出力するAPI作成
+    * url: https://fib-api-service.onrender.com
+    * 使用例: https://fib-api-service.onrender.com/?n=3
+    　クエリに n = 整数 を持たせることでnに基づいたフィボナッチ数を出力します。
+     ex) n = 3 → result = 2,
+         n = 18 → result = 2584,
+         n = 33 → result = 3524578,
+  
 ###  2. ファイル構成 
   * main.go - TCPコネクションからserverのhandlerを呼び出す
   * middleware.go - corsを設定し、get・option以外の呼び出しを拒否している
